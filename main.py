@@ -1,3 +1,4 @@
+
 import argparse
 import discord
 
@@ -13,7 +14,7 @@ args = parser.parse_args()
 @Client.event
 async def on_connect():
     await Client.wait_until_ready()
-    print("Connected successfully")
+    print("Connected")
 
 @Client.event
 async def on_message(message):
@@ -22,14 +23,16 @@ async def on_message(message):
             await message.author.kick()
         except:
             print("ERR> Most likely due to having insufficient permissions to kick said user or due to the client not having permissions itself, did you set your join link Permissions level to 8?")
-        print("> Successfully kicked " + str(message.author))
+        else:
+            print("> Successfully kicked " + str(message.author))
     else:
         if message.author.id == args.userid:
             try:
                 await message.author.kick()
-                print("> Successfully kicked " + str(message.author))
             except:
-                print("ERR> Most likely due to having insufficient permissions to kick, did you set your join link Permissions level to 8?")
+                print("ERR> Most likely due to having insufficient permissions to kick said user or due to the client not having permissions itself, did you set your join link Permissions level to 8?")
+            else:
+                print("> Successfully kicked " + str(message.author))
         elif message.author.bot:
             return
 
