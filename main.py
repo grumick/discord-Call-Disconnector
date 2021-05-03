@@ -18,7 +18,10 @@ async def on_connect():
 @Client.event
 async def on_message(message):
     if args.all is not None:
-        await message.author.kick()
+        try:   
+            await message.author.kick()
+        except:
+            print("ERR> Most likely due to having insufficient permissions to kick said user or due to the client not having permissions itself, did you set your join link Permissions level to 8?")
         print("> Successfully kicked " + str(message.author))
     else:
         if message.author.id == args.userid:
