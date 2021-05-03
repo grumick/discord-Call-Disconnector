@@ -16,6 +16,9 @@ Upon the person clicking said invite link, they will be disconnected from the ca
 
 More specifically, you're disconnected from the voice server, for some strange reason.
 
+REQUIREMENTS:
+ * Discord.py - `python3 -m pip install discord.py`
+ * Argparse
 
 To set up the bot:
 * Head to the Discord Developer portal found at the [Discord Developer Portal](https://discord.com/developers/applications)
