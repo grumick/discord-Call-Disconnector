@@ -38,7 +38,6 @@ async def on_message(message):
 if args.userid and args.token != "" or args.all is not None:
     if args.userid and args.all != "":
         print("ERR> You cannot provide two opposing arguments (-all & -userid)")
-        return
     else:
         try:
             Client.run(args.token)
