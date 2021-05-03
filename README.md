@@ -1,4 +1,4 @@
-**Effectively this is a tool that if you run correctly, will generate an invite link that if clicked while the bot is active, will temporarily disconnect the person who clicked it from whichever type of Discord call they are in*
+__Effectively this is a tool that if you run correctly, will generate an invite link that if clicked while the bot is active, will temporarily disconnect the person who clicked it from whichever type of Discord call they are in__
 
 
 This is a very simple Discord bot written off of very basic fundamentals found in the discord.py project.
