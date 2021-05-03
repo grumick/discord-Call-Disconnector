@@ -31,7 +31,8 @@ To set up the bot:
   
   
  Next, you would of course have to initialize the bot via the syntax seen below:
- ```  
+ ```
   -userid <USERID>  The Snowflake ID of the person who you would like to disconnect.
   -all            Do this to everyone, in where if anyone clicks the Invite link, they are disconnected from active call.
-  -token <TOKEN>    Token of bot as found in the Discord Developer Portal```
+  -token <TOKEN>    Token of bot as found in the Discord Developer Portal
+ ```
