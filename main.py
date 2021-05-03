@@ -37,10 +37,14 @@ async def on_message(message):
 
 
 if args.userid and args.token != "" or args.all is not None:
-    try:
-        Client.run(args.token)
-    except:
-        print("ERR> Invalid/Insufficient Token Supplied")
+    if args.userid and args.all != "":
+        print("ERR> You cannot provide two opposing arguments (-all & -userid)")
+        return
+    else:
+        try:
+            Client.run(args.token)
+        except:
+            print("ERR> Invalid/Insufficient Token Supplied")
 else:
     parser.print_help()
 
