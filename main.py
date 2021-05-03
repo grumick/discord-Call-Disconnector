@@ -1,8 +1,5 @@
 import argparse
-import threading
-import asyncio
 import discord
-from discord.ext import commands
 
 Client = discord.Client()
 
@@ -16,7 +13,7 @@ args = parser.parse_args()
 @Client.event
 async def on_connect():
     await Client.wait_until_ready()
-    print("Connected with")
+    print("Connected successfully")
 
 @Client.event
 async def on_message(message):
